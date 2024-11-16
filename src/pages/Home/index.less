@@ -1,0 +1,380 @@
+@import "./theme.less";
+
+.page {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  background-image: var(--yuligo-main-bg-image);
+  background-size: 270vh 98vh;
+
+  animation: movebg 20s linear 0s infinite;
+  transform: translate3d(0, 0, 0);
+
+  @keyframes movebg {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: -270vh 0%;
+    }
+  }
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 8px;
+  }
+
+  .content {
+    // margin-top: 120px;
+    position: absolute;
+    bottom: 73px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    // margin-bottom: 100px;
+    .lyra {
+      position: relative;
+      &-sprites {
+        visibility: var(--yuligo-main-theme-hallween-visible);
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        @keyframes sprite1Move {
+          0% {
+            top: 0;
+          }
+          50% {
+            top: 5px;
+          }
+          100% {
+            top: 0;
+          }
+        }
+
+        @keyframes sprite2Move {
+          0% {
+            top: 40px;
+          }
+          50% {
+            top: 35px;
+          }
+          100% {
+            top: 40px;
+          }
+        }
+        &-top {
+          animation: sprite1Move 2s linear 0s infinite;
+
+          position: absolute;
+          left: 20px;
+          width: 45px;
+          height: 41px;
+        }
+        &-bottom {
+          animation: sprite2Move 2s linear 0s infinite;
+          width: 29px;
+          height: 29px;
+          position: absolute;
+          top: 40px;
+        }
+      }
+      &-pumpkin {
+        visibility: var(--yuligo-main-theme-hallween-visible);
+        @keyframes shake {
+          0% {
+            rotate: -10deg;
+          }
+          50% {
+            rotate: 10deg;;
+          }
+          100% {
+            rotate: -10deg;
+          }
+        }
+
+        transform-origin: center bottom;
+        animation: shake 3s linear 0s infinite;
+        width: 66px;
+        height: 66px;
+        position: absolute;
+        right: -25px;
+        bottom: 20px;
+      }
+    }
+  }
+
+  .progress {
+    // margin-top: 10px;
+    width: 184px;
+    height: 16px;
+    border-radius: 22px;
+    background-color: #000;
+    display: flex;
+    // align-items: center;
+
+    &-num {
+      width: 56px;
+      height: 16px;
+      color: #ffffff;
+      text-align: center;
+      font-family: "Inter";
+      font-size: 14px;
+      font-weight: 600;
+    }
+    &-bg {
+      display: flex;
+      align-items: center;
+      width: 136px;
+      border-radius: 22px;
+      border: 1px solid #000;
+      background: #fff;
+      padding: 4px 4px 4px 4px;
+      &-bar {
+        height: 8px;
+        border-radius: 50px;
+        background: linear-gradient(270deg, #b72fe7 0%, #2fcbe7 100%);
+      }
+    }
+  }
+
+  .claim {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 216px;
+    height: 56px;
+    border-radius: 10px;
+    border: 1px solid var(--yuligo-claim-bg-border-color);
+    background: var(--yuligo-claim-bg-color);
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2px;
+    &-speed {
+      width: 50px;
+      height: 50px;
+      background-image: url("~@/assets/images/home/speed_bg.png");
+      background-size: 100% 100%;
+      position: relative;
+
+      &-num {
+        overflow: hidden;
+        height: 15px;
+        width: 100%;
+        text-align: center;
+        bottom: 2px;
+        position: absolute;
+        color: #ffffff;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 11px;
+        font-weight: 500;
+      }
+    }
+    &-main {
+      display: flex;
+      flex-direction: column;
+      &-amount {
+        color: #000000;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+      &-content {
+        flex: 1;
+        &-bg {
+          width: 104px;
+          height: 8px;
+          flex-shrink: 0;
+          border-radius: 8px;
+          background: #1a1a18;
+          margin-top: -9px;
+        }
+        &-text {
+          color: #ffffff;
+          text-align: center;
+          text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000,
+            1.5px 1.5px 0 #000;
+          font-family: "Tomorrow";
+          font-size: 26px;
+          font-weight: 700;
+          letter-spacing: 1.3px;
+        }
+      }
+    }
+    &-icon {
+      align-self: flex-start;
+      width: 24px;
+      height: 24px;
+      border: 1px solid #000;
+      border-radius: 8px;
+    }
+    &-boost {
+      // width: 63px;
+      padding: 0.5px 4px;
+      height: 14px;
+      line-height: 14px;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      color: #ffffff;
+      text-align: center;
+      font-family: "Inter";
+      font-size: 11px;
+      font-weight: 600;
+      background-color: #c557ec;
+      border-radius: 2px;
+      border: 0.5px solid #000;
+      border-bottom: none;
+      border-right: none;
+    }
+  }
+
+  .menu {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    &-item {
+      cursor: pointer;
+      width: 80px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: var(--yuligo-main-menu-item-image);
+      background-size: 100% 100%;
+      position: relative;
+      color: var(--yuligo-main-menu-item-color);
+
+      &-icon {
+        width: 25.67px;
+        height: 25.67px;
+        margin-right: 2px;
+        background-size: 100% 100%;
+        &-speed {
+          background-image: var(--yuligo-main-menu-item-image-1);
+        }
+        &-task {
+          background-image: var(--yuligo-main-menu-item-image-2);
+        }
+        &-item {
+          background-image: var(--yuligo-main-menu-item-image-3);
+        }
+      }
+      &-text {
+        max-width: 40px;
+        // color: #000000;
+        font-family: "Inter";
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 11px;
+        word-break: normal;
+      }
+      // &:nth-of-type(3) {
+      //   background-image: url("~@/assets/images/home/bar_bg_no.png");
+      // }
+      &-coming {
+        position: absolute;
+        bottom: 1px;
+        text-align: center;
+        width: 76px;
+        height: 12px;
+        border-radius: 2px;
+        background: #bdbac7;
+        color: #ffffff;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
+  .icon_street {
+    position: absolute;
+    top: 90px;
+    right: 5px;
+    // width: 62px;
+    // height: 52px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+    font-family: "Inter";
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+
+    &-icon {
+      position: relative;
+      width: var(--yuligo-main-theme-switch-image-width);
+      height: var(--yuligo-main-theme-switch-image-height);
+      background-image: var(--yuligo-main-theme-switch-image);
+      background-size: 100% 100%;
+    }
+    &-text {
+      text-align: center;
+      width: 40px;
+      height: 16px;
+      position: absolute;
+      bottom: var(--yuligo-main-theme-switch-image-text-bottom);
+      background-color: var(--yuligo-main-theme-switch-image-text-bg-color);
+      border-radius: 4px;
+    }
+  }
+
+  .nets {
+    visibility: var(--yuligo-main-theme-hallween-visible);
+    width: 115px;
+    height: 65px;
+    position: absolute;
+    background-image: url("~@/assets/images/home/nets.png");
+    top: 0;
+    left: 0;
+    @keyframes spiderMove {
+      0% {
+        bottom: -10px;
+      }
+      50% {
+        bottom: 70px;
+      }
+      100% {
+        bottom: -10px;
+      }
+    }
+    &-line {
+      position: absolute;
+      top: 42px;
+      left: 25px;
+      width: 1px;
+      background-color: #000;
+      height: 88px;
+      &-spider {
+        animation: spiderMove 10s linear 0s infinite;
+
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        position: absolute;
+        width: 22px;
+        height: 28px;
+      }
+    }
+  }
+}

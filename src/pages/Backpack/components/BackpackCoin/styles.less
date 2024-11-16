@@ -1,0 +1,39 @@
+.block-header-coin {
+  height: 32px;
+  border-radius: 22px;
+  border: 1px solid #000;
+  background: #fff;
+  padding: 4px;
+  padding-right: 8px;
+  box-sizing: border-box;
+  min-width: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .block-coin {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .coin-icon {
+      width: 24px;
+      height: 24px;
+      background-image: url("~@/assets/images/common/coin/goods_icon_go2.png");
+      background-size: 100% 100%;
+      margin-right: 2px;
+    }
+
+    .coin-value {
+      color: #000000;
+      text-align: center;
+      font-family: "Inter";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 2px;
+    }
+  }
+}

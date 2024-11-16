@@ -1,0 +1,191 @@
+.page{
+    margin-top: 16px;
+    padding: 0 16px;
+    .switchView{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 8px;
+        &-item{
+            width: 170px;
+            height: 34px;
+            background-image: url("~@/assets/images/SpeedBoost/tab_button_off.png");
+            background-size: 100% 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            margin-right: 5px;
+            cursor: pointer;
+            &:last-child{margin-right: unset;}
+            .text{
+                width: fit-content;
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+        .active{
+            color: #ffffff;
+            background-image: url("~@/assets/images/SpeedBoost/tab_button_on.png");
+            background-size: 100% 100%;
+        }
+        .active.switchView-item{
+            .text{
+                position: relative;
+
+            }
+        }
+    }
+    .listView{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100vh - 170px);
+        &::-webkit-scrollbar{display: none;}
+        &-item{
+            width: 168px;
+            height: 184px;
+            background-image: url("~@/assets/images/SpeedBoost/img_card.png");
+            background-size: 100% 100%;
+            margin-right: 7px;
+            margin-bottom: 8px;
+            padding: 12px;
+            position: relative;
+            &:nth-child(2n){
+                margin-right: unset;
+            }
+            &-name{
+                color: rgba(0, 0, 0, 0.85);
+                font-family: "Tomorrow";
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 20px;
+                text-transform: capitalize;
+                margin-bottom: 8px;
+                max-width: 116px;
+                word-break: keep-all;
+                padding-bottom: 8px;
+                position: relative;
+                &::after{
+                    left: 0;
+                    bottom: 0;
+                    content: '';
+                    position: absolute;
+                    width: 40px;
+                    height: 1px;
+                    border-bottom: 1px dashed #BEBED8;
+                }
+            }
+            &-level{
+                color: rgba(0, 0, 0, 0.85);
+                font-family: "Inter";
+                font-size: 14px;
+                font-weight: 600;
+                margin-bottom: 4px;
+            }
+            &-speed{
+                white-space: pre-line;
+                color: rgba(0, 0, 0, 0.6);
+                font-family: "Inter";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+            &-icon{
+                position: absolute;
+                right: 12px;
+                bottom: 58px;
+                width: 64px;
+                height: 64px;
+            }
+            &-iconEquiped{
+                width: 80px;
+                height: 80px;
+                right: 8px;
+                bottom: 54px;
+            }
+            &-button{
+                position: absolute;
+                bottom: 10px;
+                left: 8px;
+                width: 152px;
+                height: 32px;
+                border-radius: 4px;
+                background-image: url("~@/assets/images/SpeedBoost/button_state_unequip.png");
+                background-size: 100% 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                &.max{
+                    background-image: url("~@/assets/images/SpeedBoost/button_state_max.png");
+                }
+                &.ban{
+                    background-image: url("~@/assets/images/SpeedBoost/button_state_ban.png");
+                    color: rgba(0, 0, 0, 0.25);
+                    text-align: center;
+                    font-family: "Inter";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: normal;
+                    cursor: unset;
+                }
+                .buttonTextView{
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 7.5px 9.5px;
+                    color: rgba(0, 0, 0, 0.85);
+                    text-align: center;
+                    font-family: "Inter";
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 600;
+                    &-level{
+                        white-space: nowrap;
+                    }
+                    &-box{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 16px;
+                        white-space: nowrap;
+                        .prop{
+                            width: 24px;
+                            height: 24px;
+                        }
+                        .coin{
+                            width: 24px;
+                            height: 24px;
+                            margin-right: 3px;
+                        }
+                    }
+                    &-max{
+                        color: #AF00A9;
+                        font-size: 18px;
+                    }
+                }
+            }
+            &-button2{
+                .buttonTextView{
+                    justify-content: center;
+                }
+            }
+            &-equipSwitch{
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                top: 6px;
+                right: 6px;
+                cursor: pointer;
+            }
+        }
+    }
+}

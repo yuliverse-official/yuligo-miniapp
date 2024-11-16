@@ -1,0 +1,28 @@
+
+@font-face {
+  font-family: "Tomorrow";
+  src: url("./Tomorrow-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Tomorrow-ExtraBold";
+  src: url("./Tomorrow-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./Inter-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

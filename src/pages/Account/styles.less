@@ -1,0 +1,327 @@
+.page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(180deg, #fafaff 12.25%, #ececff 100%), #fff;
+
+  .block {
+    &-info-account {
+      width: 345px;
+      height: 179px;
+      background-image: url("~@/assets/images/account/account_bg@2x.png");
+      background-size: 100% 100%;
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      &-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        align-self: flex-start;
+        margin-top: 9px;
+        margin-left: 13.8px;
+        margin-bottom: 6px;
+
+        .account-info {
+          &-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 1px solid #000000;
+            flex-shrink: 0;
+
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+            }
+          }
+
+          &-username {
+            color: #000000;
+            font-family: "Inter";
+            font-size: 18px;
+            font-weight: 600;
+            line-height: normal;
+            margin-bottom: 3px;
+            max-width: 140px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            min-height: 18px;
+            margin-top: 10px;
+            margin-bottom: -4px;
+          }
+
+          &-wrap {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 8px;
+
+            &-name {
+              color: #000000;
+              font-family: "Inter";
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 19px;
+              margin-right: 4px;
+            }
+          }
+
+          &-email {
+            color: #000000;
+            font-family: "Inter";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            max-width: 250px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            &-nobind {
+              padding: 2px 4px;
+              border-radius: 4px;
+              background: #2a2933;
+              cursor: pointer;
+
+              &-text {
+                color: #ffffff;
+                font-family: "Inter";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                display: inline-block;
+              }
+            }
+          }
+
+          &-wallet {
+            color: #387fd2;
+            font-family: "Inter";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 19px;
+            text-decoration-line: underline;
+
+            &-nobind {
+              width: 100px;
+              height: 19px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              border-radius: 4px;
+              border: 0.5px solid #000;
+              background: #4890e5;
+              cursor: pointer;
+
+              &-text {
+                color: #ffffff;
+                text-align: right;
+                font-family: "Inter";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+              }
+            }
+          }
+
+          &-list {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin-left: 11px;
+          }
+        }
+      }
+    }
+
+    &-info-score-container {
+      margin-top: 4px;
+      width: 325px;
+      height: 44px;
+      background-image: url("~@/assets/images/account/color_bg@2x.png");
+      background-size: 100% 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 6px 8px;
+      box-sizing: border-box;
+
+      .block-info-score-list {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .info-score {
+        &-icon {
+          width: 32px;
+          height: 32px;
+          background-image: url("~@/assets/images/common/coin/goods_icon_go3.png");
+          background-size: 100% 100%;
+          flex-shrink: 0;
+        }
+
+        &-name {
+          color: #000000;
+          text-align: center;
+          font-family: "Tomorrow";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          margin-left: 3px;
+        }
+
+        &-score {
+          color: #000000;
+          text-align: center;
+          font-family: "Inter";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+
+      &-cp {
+        background-image: url("~@/assets/images/account/color_bg2@2x.png");
+
+        .info-score {
+          &-icon {
+            background-image: url("~@/assets/images/common/coin/goods_icon_cp.png");
+          }
+        }
+      }
+    }
+
+    &-info-wallet-container {
+      width: 120px;
+      height: 20px;
+      position: absolute;
+      right: 2px;
+      top: 7px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      .account-info-wallet {
+        color: #000000;
+        font-family: "Inter";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 19px;
+
+        &-nobind {
+          color: #2d5bff;
+          font-family: "Inter";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          text-decoration-line: underline;
+          cursor: pointer;
+        }
+
+        &-icon {
+          width: 12px;
+          height: 12px;
+          background-image: url("~@/assets/images/common/btn/arrow_right_black@2x.png");
+          background-size: 100% 100%;
+          margin-left: 1px;
+
+          &-nobind {
+            width: 12px;
+            height: 12px;
+            background-image: url("~@/assets/images/common/btn/arrow_right_blue@2x.png");
+            background-size: 100% 100%;
+            margin-left: 2px;
+            cursor: pointer;
+            margin-bottom: -2px;
+          }
+        }
+      }
+    }
+
+    &-info-merchant {
+      margin-top: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .merchant {
+        &-title {
+          color: #000000;
+          font-family: "Tomorrow";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        &-decription {
+          width: 308px;
+          color: #000000cc;
+          text-align: center;
+          font-family: "Inter";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          margin-top: 12px;
+          word-wrap: normal;
+          word-break: normal;
+        }
+
+        &-btn {
+          width: 240px;
+          height: 40px;
+          margin-top: 16px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          background-size: 100% 100%;
+          cursor: pointer;
+
+          &-text {
+            text-align: center;
+            font-family: "Inter";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15px;
+          }
+
+          &-disable {
+            background-image: url("~@/assets/images/common/btn/btn_o_black_240x40@2x.png");
+            cursor: initial;
+
+            .merchant-btn-text {
+              color: #ffffffb3;
+            }
+          }
+        }
+      }
+    }
+  }
+}

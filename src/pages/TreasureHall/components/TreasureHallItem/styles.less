@@ -1,0 +1,276 @@
+.item {
+  width: 100%;
+  height: 100%;
+  background-image: url("~@/assets/images/treasureHall/img_store_card@2x.png");
+  background-size: 100% 100%;
+  position: relative;
+  padding: 0px 8px;
+  padding-top: 19px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-mask {
+    background-image: url("~@/assets/images/treasureHall/img_store_card_mask@2x.png");
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    pointer-events: none;
+  }
+
+  &-quality {
+    width: 82px;
+    height: 13px;
+    background-size: 100% 100%;
+    position: absolute;
+    top: 0px;
+
+    &-legendary {
+      background-image: url("~@/assets/images/treasureHall/quality/img_store_card_legendary@2x.png");
+    }
+
+    &-epic {
+      background-image: url("~@/assets/images/treasureHall/quality/img_store_card_epic@2x.png");
+    }
+
+    &-superior {
+      background-image: url("~@/assets/images/treasureHall/quality/img_store_card_superior@2x.png");
+    }
+
+    &-rare {
+      background-image: url("~@/assets/images/treasureHall/quality/img_store_card_rare@2x.png");
+    }
+
+    &-common {
+      background-image: url("~@/assets/images/treasureHall/quality/img_store_card_common@2x.png");
+    }
+  }
+
+  &-name {
+    max-width: 158px;
+    color: #000000d9;
+    text-align: center;
+    font-family: "Tomorrow";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 14px;
+    text-transform: capitalize;
+    word-break: normal;
+    position: absolute;
+    top: 19px;
+  }
+
+  &-boost {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+
+    &-list {
+      position: absolute;
+      bottom: 82px;
+      left: 8px;
+      right: 8px;
+    }
+
+    &-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      flex-shrink: 0;
+    }
+
+    &-icon {
+      width: 18px;
+      height: 18px;
+      background-size: 100% 100%;
+      margin-right: 2px;
+
+      &-cp {
+        background-image: url("~@/assets/images/common/coin/goods_icon_cp.png");
+      }
+
+      &-go {
+        background-image: url("~@/assets/images/common/coin/goods_icon_go3.png");
+      }
+    }
+
+    &-name {
+      color: #00000080;
+      text-align: center;
+      font-family: "Inter";
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    &-value {
+      color: #000000d9;
+      text-align: right;
+      font-family: "Inter";
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+    }
+  }
+
+  &-icon {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .block-control {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+
+  .block-control-list {
+    position: absolute;
+    bottom: 14px;
+    left: 8px;
+    right: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item-owned {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .owned {
+      &-icon {
+        width: 14px;
+        height: 14px;
+        background-image: url("~@/assets/images/common/toast/btn_task_yes@2x.png");
+        background-size: 100% 100%;
+      }
+
+      &-name {
+        color: #008353;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+
+    &-none {
+      .owned-icon {
+        background-image: url("~@/assets/images/treasureHall/btn_task_unable@2x.png");
+      }
+
+      .owned-name {
+        color: #00000066;
+      }
+    }
+  }
+
+  .item-sale {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    &-icon {
+      width: 24px;
+      height: 24px;
+      background-image: url("~@/assets/images/common/coin/goods_icon_ton@2x.png");
+      background-size: 100% 100%;
+
+      &-2 {
+        background-image: url("~@/assets/images/common/coin/goods_icon_ton@2x.png");
+      }
+
+      &-1 {
+        background-image: url("~@/assets/images/common/coin/goods_icon_go3.png");
+      }
+    }
+
+    &-text {
+      color: #000000e6;
+      text-align: center;
+      font-family: "Inter";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-left: 2px;
+    }
+  }
+
+  .control-btn {
+    min-height: 24px;
+    border-radius: 4px;
+    padding: 2px;
+    cursor: pointer;
+
+    &-bg {
+      border-radius: 2px;
+      padding: 2px 8px;
+    }
+
+    &-text {
+      color: #ffffff;
+      text-align: center;
+      font-family: "Inter";
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+    }
+
+    &-blue {
+      border: 1px solid #7797ff;
+
+      .control-btn-bg {
+        background: #7797ff;
+      }
+    }
+
+    &-purple {
+      border: 1px solid #9e7aff;
+      .control-btn-bg {
+        background: #9e7aff;
+      }
+    }
+
+    &-disable {
+      cursor: initial;
+      border: 1px solid #cec9d6;
+
+      .control-btn-bg {
+        background: #cec9d6;
+      }
+    }
+  }
+}

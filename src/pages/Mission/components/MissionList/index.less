@@ -1,0 +1,89 @@
+.page{
+    width: 100%;
+    padding: 0 14px;
+    // margin-top: 24px;
+    &-titleView{
+        font-family: "Tomorrow";
+        font-style: normal;
+        line-height: normal;
+        margin-bottom: 12px;
+        color: #647585;
+        width: 100%;
+        .switchView{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 6px;
+            &-item{
+                width: 112px;
+                height: 34px;
+                background-image: url("~@/assets/images/Mission/tab_button_off.png");
+                background-size: 100% 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #000000;
+                margin-right: 5px;
+                &:last-child{margin-right: unset;}
+                .text{
+                    width: fit-content;
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+            .active{
+                color: #ffffff;
+                background-image: url("~@/assets/images/Mission/tab_button_on.png");
+                background-size: 100% 100%;
+            }
+            .active.switchView-item{
+                .text{
+                    position: relative;
+
+                }
+            }
+        }
+        .descView{
+            width: 344px;
+            height: 46px;
+            padding-top: 12px;
+            padding-bottom: 8px;
+            border-radius: 8px;
+            background: rgba(5, 245, 238, 0.08);
+            text-align: center;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
+            word-break: keep-all;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-missionList{
+        overflow: scroll;
+        padding-top: 5px;
+        max-height: calc(100vh - 130px);
+        &::-webkit-scrollbar{display: none;}
+        &-nodata{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: rgba(0, 0, 0, 0.8);
+            text-align: center;
+            font-family: "Inter";
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            height: 50vh;
+            .icon{
+                width: 80px;
+                height: 80px;
+                margin-bottom: 11px;
+            }
+        }
+    }
+}

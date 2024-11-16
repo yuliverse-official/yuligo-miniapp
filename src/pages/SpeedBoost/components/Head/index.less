@@ -1,0 +1,63 @@
+.page{
+    padding-top: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-main{
+        width: 327px;
+        height: 83px;
+        position: relative;
+        background-image: url("~@/assets/images/SpeedBoost/img_lyra_box.png");
+        background-size: 100% 100%;
+        &-account{
+            position: absolute;
+            right: 0;
+            top: -8px;
+        }
+        &-level{
+            color: rgba(0, 0, 0, 0.85);
+            font-family: "Tomorrow";
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: normal;
+            position: absolute;
+            left: 84px;
+            bottom: 27px;
+        }
+        &-speed{
+            width: 60px;
+            height: 17px;
+            color: rgb(255, 255, 255);
+            text-align: center;
+            font-family: "Inter";
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            position: absolute;
+            right: 20px;
+            bottom: 21px;
+            white-space: nowrap;
+        }
+        &-progress{
+            width: 225px;
+            height: 14px;
+            background-color: #ffffff;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            position: absolute;
+            right: 20px;
+            bottom: 4px;
+            border-radius: 2px;
+            padding: 2px;
+            .process{
+                width: 0;
+                height: 100%;
+                border-radius: 2px;
+                background: linear-gradient(270deg, #B72FE7 0%, #2FCBE7 100%);
+                transition: width .4s;
+            }
+        }
+    }
+}

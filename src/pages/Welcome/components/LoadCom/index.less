@@ -1,0 +1,53 @@
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url("~@/assets/images/welcome/map_bg.png");
+  background-size: cover;
+  background-position: top center;
+  z-index: 1;
+  padding-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .logo {
+    width: 166px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    color: #fff;
+    img {
+      width: 150px;
+      height: 134px;
+    }
+  }
+  .bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 75px;
+    .text {
+      width: 100%;
+      text-align: right;
+      color: #000000;
+      font-family: "Tomorrow";
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .progress {
+      margin-top: 8px;
+      width: 192px;
+      height: 17px;
+      background-color: #000;
+      &-bar {
+        height: 100%;
+        background: #ab41ff;
+      }
+    }
+  }
+}

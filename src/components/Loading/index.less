@@ -1,0 +1,33 @@
+.loading {
+  flex-direction: column;
+  align-items: center;
+  display: none;
+  &-show {
+    display: flex;
+  }
+}
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.text {
+  margin-top: 4px;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+}

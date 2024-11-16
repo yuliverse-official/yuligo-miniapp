@@ -1,0 +1,79 @@
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 15px;
+  margin-top: 33px;
+
+  .wallet-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 52px;
+
+    .wallet-item {
+      width: 315px;
+      height: 58px;
+      padding: 0px 6px;
+      box-sizing: border-box;
+      background-image: url("~@/assets/images/wallet/icon_wallet_bg@2x.png");
+      background-size: 100% 100%;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      cursor: pointer;
+
+      &-icon {
+        width: 42px;
+        height: 42px;
+        margin-right: 6px;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      &-name {
+        width: 177px;
+        flex-shrink: 0;
+        color: #000000;
+        font-family: "Inter";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .qrcode {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 34px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.header {
+  div {
+    color: #000000;
+    font-family: "Tomorrow";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+}

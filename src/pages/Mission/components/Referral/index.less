@@ -1,0 +1,350 @@
+.page {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  max-height: calc(100vh - 130px);
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  width: 100%;
+  // padding: 10px 26px;
+  .topView {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 21px;
+    &-titleView {
+      color: #000000;
+      font-family: "Tomorrow";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 6px;
+      position: relative;
+      &-lyra{
+        width: 20px;
+        height: 20px;
+        margin-right: 3px;
+      }
+    }
+    &-descView {
+      white-space: pre-line;
+      margin-bottom: 16px;
+      text-align: left;
+      font-family: "Inter";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      color: rgba(0, 0, 0, 0.8);
+    }
+    &-processView {
+      width: 100%;
+      min-height: 320px;
+      background-image: url("~@/assets/images/Mission/invite_bg.png");
+      background-size: 100% 100%;
+      padding-top: 30px;
+      padding-right: 35px;
+      padding-left: 35px;
+      padding-bottom: 23px;
+      word-break: keep-all;
+      .lineItem {
+        display: flex;
+        color: #000000;
+        font-family: "Inter";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 19px;
+        margin-bottom: 29px;
+        height: 17px;
+        position: relative;
+        white-space: pre-line;
+        padding-left: 9px;
+        .light {
+          width: 16px;
+          height: 16px;
+          margin-right: 8px;
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          background-image: url("~@/assets/images/Mission/invite_item_tag.png");
+          background-size: 100% 100%;
+          width: 15px;
+          height: 49px;
+          top: 0px;
+          left: -9px;
+        }
+        &:last-child{
+          margin-bottom: unset;
+        }
+        span{
+          word-break: keep-all;
+        }
+      }
+      &-line{
+        width: 100%;
+        margin-top: 50px;
+        height: 1px;
+        border-top: 1px dashed #000000;
+      }
+      &-btn {
+        margin: auto;
+        margin-top: 16px;
+        margin-bottom: 19px;
+      }
+      &-copyLink {
+        color: #000000;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration-line: underline;
+      }
+    }
+  }
+  .bottomView {
+    width: 100%;
+    font-family: "Inter";
+    font-style: normal;
+    line-height: normal;
+    color: #000000;
+    &-top {
+      width: 100%;
+      padding: 8px 12px;
+      padding-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-label {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 600;
+        font-family: "Tomorrow";
+        &-icon{
+          width: 20px;
+          height: 20px;
+          margin-right: 3px;
+        }
+      }
+      &-referby {
+        color: #4890E5;
+        text-align: right;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration-line: underline;
+      }
+    }
+    &-contain {
+      width: 100%;
+      height: fit-content;
+      border-radius: 12px;
+      // background: rgba(166, 223, 255, 0.16);
+      padding: 0 16px;
+      .switchView {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 11px 0;
+        &-left {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .item {
+            color: rgba(0, 0, 0, 0.45);
+            font-size: 14px;
+            font-weight: 500;
+            margin-right: 8px;
+            border-radius: 4px;
+            width: fit-content;
+            height: 27px;
+            padding: 5px 10px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:last-child {
+              margin-right: unset;
+            }
+          }
+          .active {
+            color: #000000;
+            border: 1px solid #000000;
+          }
+        }
+        &-right {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .coinText {
+            font-size: 16px;
+            font-weight: 400;
+            margin-right: 4px;
+          }
+          .coin {
+            width: 32px;
+            height: 32px;
+          }
+        }
+      }
+      .contentView {
+        padding: 3px 0;
+        min-height: 150px;
+        font-family: "Skranji";
+        .itemView {
+          width: 100%;
+          padding: 8px 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          &-left {
+            display: flex;
+            align-items: center;
+            color: #000000;
+            font-family: "Inter";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            .icon {
+              width: 40px;
+              height: 40px;
+              margin-right: 11px;
+              border: 0.8px solid #000000;
+              border-radius: 50%;
+            }
+          }
+          &-right {
+            color: rgba(255, 255, 255, 0.75);
+            font-size: 12px;
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .coin {
+              width: 24px;
+              height: 24px;
+              margin-left: 2px;
+            }
+          }
+        }
+        &-contain{
+            width: 100%;
+            height: fit-content;
+            border-radius: 12px;
+            background: rgba(166, 223, 255, 0.16);
+            padding: 0 16px;
+            .switchView{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 11px 0;
+                border-bottom: 2px solid #2030377a;
+                &-left{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .item{
+                        color: #6E8091;
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-right: 16px;
+                        &:last-child{margin-right: unset;}
+                    }
+                    .active{
+                        color: #FFFFFF;
+                    }
+                }
+                &-right{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .coinText{
+                        font-size: 16px;
+                        font-weight: 400;
+                        margin-right: 4px;
+                    }
+                    .coin{
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+            .contentView{
+                padding: 3px 0;
+                min-height: 82px;
+                max-height: 50vh;
+                overflow-x: hidden;
+                overflow-y: scroll;
+                font-family: "Skranji";
+                &::-webkit-scrollbar{display: none;}
+                .itemView{
+                    width: 100%;
+                    padding: 8px 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    &-left{
+                        display: flex;
+                        align-items: center;
+                        color: rgb(255, 255, 255);
+                        font-size: 14px;
+                        font-weight: 400;
+                        .icon{
+                            width: 28px;
+                            height: 28px;
+                            margin-right: 8px;
+                        }
+                    }
+                    &-right{
+                        color: rgba(255, 255, 255, 0.75);
+                        font-size: 12px;
+                        font-weight: 400;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .coin{
+                            width: 24px;
+                            height: 24px;
+                            margin-left: 2px;
+                        }
+                    }
+                }
+            }
+        }
+        .noData{
+          margin-top: 8px;
+          margin-bottom: 10px;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: rgba(0, 0, 0, 0.75);
+          font-size: 12px;
+          font-weight: 400;
+          .icon{
+              width: 80px;
+              height: 80px;
+              margin-bottom: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+.spin {
+  cursor: pointer;
+  position: fixed;
+  bottom: 80px;
+  right: 8px;
+  width: 72px;
+  height: 72px;
+  z-index: 999;
+}

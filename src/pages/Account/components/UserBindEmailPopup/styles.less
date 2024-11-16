@@ -1,0 +1,156 @@
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 16px;
+  margin-top: 32px;
+
+  .block-info {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .black-border {
+      border-radius: 6px;
+      border: 1px solid #343333;
+    }
+
+    .info-input {
+      &-email {
+        width: 100%;
+        height: 44px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0px 6px;
+
+        &-icon {
+          width: 24px;
+          height: 24px;
+          background-image: url("~@/assets/images/account/icon_email@2x.png");
+          background-size: 100% 100%;
+        }
+
+        &-name {
+          color: #000000;
+          text-align: center;
+          font-family: "Inter";
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 15px;
+          margin-left: 4px;
+        }
+
+        &-inputbox {
+          flex: 1;
+          margin-left: 24px;
+        }
+      }
+
+      &-code {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 6px;
+        height: 44px;
+
+        :global {
+          .adm-input-element {
+            -moz-appearance: textfield !important;
+            -webkit-appearance: none !important;
+            appearance: none !important;
+          }
+
+          .adm-input-element::-webkit-inner-spin-button,
+          .adm-input-element::-webkit-outer-spin-button {
+            -moz-appearance: textfield !important;
+            -webkit-appearance: none !important;
+            appearance: none !important;
+          }
+        }
+
+        &-inputbox {
+          width: 201px;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-left: 12px;
+        }
+
+        &-btn {
+          width: 104px;
+          height: 100%;
+          border-radius: 6px;
+          border: 1px solid #000;
+          background: #4890e5;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+
+          &-text {
+            color: #ffffff;
+            text-align: center;
+            font-family: "Inter";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 15px;
+          }
+
+          &-disable {
+            border: 1px solid #bfbfbf;
+            background-color: initial;
+            cursor: initial;
+
+            .info-input-code-btn-text {
+              color: #bfbfbf;
+            }
+          }
+        }
+      }
+
+      &-btn {
+        margin-top: 35px;
+        margin-bottom: 15px;
+        width: 240px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-image: url("~@/assets/images/common/btn/btn_o_white_240x40@2x.png");
+        background-size: 100% 100%;
+        cursor: pointer;
+
+        &-text {
+          color: #ffffff;
+          text-align: center;
+          font-family: "Inter";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 15px;
+        }
+
+        &-disable {
+          background-image: url("~@/assets/images/common/btn/btn_o_black_240x40@2x.png");
+          background-size: 100% 100%;
+          cursor: initial;
+
+          .info-input-btn-text {
+            color: #ffffffb3;
+          }
+        }
+      }
+    }
+  }
+}

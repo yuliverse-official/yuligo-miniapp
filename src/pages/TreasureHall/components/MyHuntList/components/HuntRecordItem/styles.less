@@ -1,0 +1,89 @@
+.item {
+  width: 100%;
+  height: 100%;
+  background-image: url("~@/assets/images/treasureHall/img_store_card_2@2x.png");
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &-name {
+    color: #000000d9;
+    text-align: center;
+    font-family: "Tomorrow";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 16px;
+    text-transform: capitalize;
+    min-height: 32px;
+    margin-top: 16px;
+  }
+
+  &-icon {
+    width: 80px;
+    height: 80px;
+    margin-top: -1px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &-record {
+    width: 100%;
+    padding: 0px 10px;
+    position: absolute;
+    bottom: 16px;
+    display: flex;
+    flex-direction: column;
+
+    .record-title {
+      width: 146px;
+      color: #424776;
+      font-family: "Tomorrow";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 16px;
+      word-break: normal;
+      margin-left: 1px;
+      margin-bottom: 2px;
+    }
+
+    .item-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 5px;
+      &-icon {
+        width: 14px;
+        height: 14px;
+
+        background-size: 100% 100%;
+
+        &-location {
+          background-image: url("~@/assets/images/treasureHall/icon_location@2x.png");
+        }
+
+        &-time {
+          background-image: url("~@/assets/images/treasureHall/icon_timer@2x.png");
+        }
+      }
+
+      &-text {
+        color: #717497;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-left: 2px;
+      }
+    }
+  }
+}

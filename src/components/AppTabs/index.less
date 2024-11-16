@@ -1,0 +1,88 @@
+@import "./theme.less";
+
+.content {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 64px;
+  background-size: 100% 100%;
+  z-index: 999;
+  background: var(--yuligo-tab-image);
+  font-family: "Tomorrow";
+  .tabs {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &-item {
+      width: 105px;
+      height: 48px;
+      padding: 2px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 14px;
+      position: relative;
+      color: var(--yuligo-tab-text-color-normal);
+      &.active {
+        // background: #0000004d;
+        color: var(--yuligo-tab-text-color-active);
+      }
+      &-icon {
+        width: 32px;
+        height: 32px;
+        background-size: 100% 100%;
+        &-Going{
+          background-image: var(--yuligo-tab-icon-Going);
+          &-active{
+            background-image: var(--yuligo-tab-icon-Going-active);
+          }
+        }
+        &-Hunt{
+          background-image: var(--yuligo-tab-icon-Hunt);
+          &-active{
+            background-image: var(--yuligo-tab-icon-Hunt-active);
+          }
+        }
+        &-Merchant{
+          background-image: var(--yuligo-tab-icon-Merchant);
+          &-active{
+            background-image: var(--yuligo-tab-icon-Merchant-active);
+          }
+        }
+        &-Account{
+          background-image: var(--yuligo-tab-icon-Account);
+          &-active{
+            background-image: var(--yuligo-tab-icon-Account-active);
+          }
+        }
+
+      }
+      
+      &-name {
+        font-size: 11px;
+        font-weight: 600;
+      }
+      &-coming {
+        position: absolute;
+        width: 76px;
+        height: 12px;
+        background: #858195;
+        top: 20px;
+        // right: 0;
+        color: #858195;
+        font-size: 10px;
+        line-height: 12px;
+        border-radius: 2px;
+        background: #ccc9d7;
+        text-align: center;
+      }
+    }
+  }
+}
